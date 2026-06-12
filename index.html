@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My APP</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <h1>Welcome to My App — Welcome</h1>
+    <meta
+      name="description"
+      content="Modern landing page for My App with sign up and login links"
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #0b1220;
+        --accent: #06b6d4;
+        --muted: #94a3b8;
+        --glass: rgba(255, 255, 255, 0.04);
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          Segoe UI,
+          Roboto,
+          Arial;
+      }
+      body {
+        background:
+          linear-gradient(180deg, #071029 0%, #071428 60%),
+          url("") no-repeat center/cover;
+        color: #e6eef6;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #7c3aed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+      nav {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        padding: 8px 10px;
+        border-radius: 8px;
+      }
+      nav a:hover {
+        color: #fff;
+        background: var(--glass);
+      }
+      .cta {
+        background: var(--accent);
+        color: #012;
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 28px;
+        align-items: center;
+        margin-top: 36px;
+      }
+      .hero h1 {
+        font-size: 36px;
+        line-height: 1.03;
+        margin: 0;
+      }
+      .hero p.lead {
+        color: var(--muted);
+        margin-top: 12px;
+        font-size: 16px;
+      }
+      .card {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 28px;
+      }
+      .feature {
+        background: transparent;
+        padding: 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .feature h4 {
+        margin: 0 0 8px 0;
+      }
+      footer {
+        margin-top: 48px;
+        padding: 18px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        color: var(--muted);
+        font-size: 14px;
+      }
+      /* Responsive */
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .features {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <div class="container">
+      <header>
+        <div class="brand">
+          <div class="logo">A</div>
+          <div>
+            <div style="font-weight: 700">My App</div>
+            <div style="font-size: 12px; color: var(--muted)">
+              Simple, fast, modern
+            </div>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="login.html">Sign in</a>
+          <a href="signup.html" class="cta">Get started</a>
+        </nav>
+      </header>
+      <section class="hero">
+        <div>
+          <h1>Design better experiences — ship faster.</h1>
+          <p class="lead">
+            A minimal starter landing page with built-in sign up and login
+            pages. Lightweight, responsive, and easy to customize.
+          </p>
+          <div style="margin-top: 18px; display: flex; gap: 10px">
+            <a href="signup.html" class="cta">Create account</a>
+            <a
+              href="login.html"
+              style="
+                color: var(--muted);
+                align-self: center;
+                text-decoration: none;
+              "
+              >Or sign in</a
+            >
+          </div>
+          <div class="features">
+            <div class="feature card">
+              <h4>Fast setup</h4>
+              <p style="color: var(--muted); margin: 0">
+                Start with plain HTML, CSS, and optional JS — no tooling
+                required.
+              </p>
+            </div>
+            <div class="feature card">
+              <h4>Responsive</h4>
+              <p style="color: var(--muted); margin: 0">
+                Looks great on mobile and desktop with a single responsive
+                stylesheet.
+              </p>
+            </div>
+            <div class="feature card">
+              <h4>Prototype-ready</h4>
+              <p style="color: var(--muted); margin: 0">
+                Client-side demo auth is included for quick prototyping.
+              </p>
+            </div>
+          </div>
+        </div>
+        <aside>
+          <div class="card">
+            <h3 style="margin: 0 0 8px 0">Get started</h3>
+            <p style="color: var(--muted); margin: 0 0 12px 0">
+              Create an account to try the demo flow, or sign in if you already
+              have one.
+            </p>
+            <div style="display: flex; gap: 8px; margin-top: 12px">
+              <a href="signup.html" class="cta">Sign up</a>
+              <a
+                href="login.html"
+                style="color: var(--muted); align-self: center"
+                >Sign in</a
+              >
+            </div>
+          </div>
+        </aside>
+      </section>
+      <footer>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+          "
+        >
+          <div>© My App • Built with a tiny static prototype</div>
+          <div style="color: var(--muted)">Made for demos — not production</div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Small script to show greeting when a session exists
+      (function () {
+        try {
+          var s = localStorage.getItem("sessionUser");
+          if (s) {
+            var user = JSON.parse(s);
+            var nav = document.querySelector("nav");
+            if (nav) {
+              var el = document.createElement("span");
+              el.style.color = "#d1fae5";
+              el.style.marginLeft = "8px";
+              el.textContent = "Welcome, " + (user.name || user.email);
+              nav.appendChild(el);
+            }
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+    </script>
+  </body>
+</html>

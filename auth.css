@@ -1,0 +1,81 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+}
+* {
+  box-sizing: border-box;
+  font-family:
+    Segoe UI,
+    system-ui,
+    Arial,
+    sans-serif;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #fff);
+}
+main.card {
+  max-width: 420px;
+  margin: 6vh auto;
+  padding: 24px;
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+}
+h1 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+label {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
+input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #e6e9ee;
+  border-radius: 6px;
+  font-size: 15px;
+}
+button {
+  margin-top: 18px;
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(1px);
+}
+p {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+small.message {
+  display: block;
+  margin-top: 10px;
+  color: #059669;
+}
+@media (max-width: 480px) {
+  main.card {
+    margin: 3vh 12px;
+    padding: 16px;
+  }
+}
